@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aerotek Corp | Aerospace engineering workforce</title>
+<meta name="description" content="Aerotek Corp places aerospace engineers and technical specialists with the teams building, testing and certifying what flies next. New website coming in 2027.">
+<meta name="theme-color" content="#0B1F33">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 28 28%22><path d=%22M14 2L26 24 14 19 2 24z%22 fill=%22%231D4ED8%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF2F6;--ink:#0B1F33;--muted:#475A70;--line:#C3CFDB;
+  --accent:#1D4ED8;--accent-soft:#E3EBFB;--signal:#F26A21;
+  --band:#0B1F33;--band-ink:#EEF2F6;--band-line:rgba(238,242,246,.22);
+  --grid:rgba(11,31,51,.07);--card:#FFFFFF;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0A1624;--ink:#E7EDF4;--muted:#9AABBE;--line:#233750;
+    --accent:#7BA3FF;--accent-soft:#132947;--signal:#FF8A4C;
+    --band:#070F1A;--band-ink:#E7EDF4;--band-line:rgba(231,237,244,.16);
+    --grid:rgba(231,237,244,.06);--card:#0F2036;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:scroll}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(20px,4vw,32px)}
+h1,h2,h3{font-stretch:115%;font-weight:800;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+h3{font-size:1.05rem}
+p{max-width:62ch}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-stretch:118%;font-weight:700;font-size:1.1rem;white-space:nowrap}
+.brand svg{color:var(--accent);flex:none}
+nav.primary{display:flex;align-items:center;gap:28px}
+nav.primary a{font-size:.95rem;font-weight:600;text-decoration:none}
+nav.primary a:hover{text-decoration:underline;text-underline-offset:4px}
+.nav-cta{padding:9px 16px;border-radius:4px;border:1.5px solid var(--ink);font-weight:600;font-size:.9rem;text-decoration:none}
+.nav-cta:hover{background:var(--ink);color:var(--paper)}
+.burger{display:none}
+.burger-label{display:none}
+
+@media (max-width:760px){
+  nav.primary{position:fixed;inset:64px 0 auto 0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 0;transform:translateY(-130%);opacity:0;transition:transform .25s ease,opacity .2s ease;max-height:calc(100vh - 64px);overflow:auto}
+  nav.primary a{padding:16px clamp(20px,4vw,32px);border-top:1px solid var(--line)}
+  nav.primary .nav-cta{margin:14px clamp(20px,4vw,32px);border-top:none;display:inline-block;width:fit-content}
+  .burger-label{display:flex;align-items:center;justify-content:center;width:40px;height:40px;cursor:pointer}
+  .burger-label span,.burger-label span::before,.burger-label span::after{content:"";display:block;width:22px;height:2px;background:var(--ink);position:relative;transition:transform .2s ease,opacity .2s ease}
+  .burger-label span::before{position:absolute;top:-7px}
+  .burger-label span::after{position:absolute;top:7px}
+  .burger:checked ~ .bar nav.primary{transform:translateY(0);opacity:1}
+  .burger:checked ~ .bar .burger-label span{background:transparent}
+  .burger:checked ~ .bar .burger-label span::before{transform:translateY(7px) rotate(45deg)}
+  .burger:checked ~ .bar .burger-label span::after{transform:translateY(-7px) rotate(-45deg)}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,var(--grid) 1.6px,transparent 1.6px);background-size:26px 26px}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:clamp(40px,7vw,80px) clamp(20px,4vw,32px) clamp(56px,8vw,96px)}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1.5px solid var(--signal);border-radius:999px;padding:6px 16px 6px 12px;font-weight:600;font-size:.9rem;margin-bottom:24px}
+.badge i{width:9px;height:9px;border-radius:50%;background:var(--signal);flex:none}
+@media(prefers-reduced-motion:no-preference){.badge i{animation:pulse 2.2s ease-out infinite}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(242,106,33,.55)}70%,100%{box-shadow:0 0 0 10px rgba(242,106,33,0)}}
+h1{font-size:clamp(2.2rem,5vw,3.9rem);margin-bottom:20px}
+.lede{font-size:1.12rem;color:var(--muted);margin-bottom:30px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:4px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);transition:background .15s,color .15s,border-color .15s}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.hero-art{justify-self:center;width:100%;max-width:470px}
+@media(prefers-reduced-motion:no-preference){.hero-art{animation:rise .8s ease both .1s}.hero .wrap>div:first-child{animation:rise .8s ease both}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.diagram .rings circle{fill:none;stroke:var(--line);stroke-width:1}
+.diagram .guide line{stroke:var(--accent);stroke-width:1;stroke-dasharray:6 6;opacity:.7}
+.diagram .plane path{fill:var(--card);stroke:var(--ink);stroke-width:1.8;stroke-linejoin:round}
+.diagram .dim line{stroke:var(--muted);stroke-width:1.2}
+.diagram .dim text{fill:var(--muted);font-size:13px;font-family:inherit}
+
+/* ---------- generic section rhythm ---------- */
+section{padding:clamp(56px,8vw,88px) 0}
+.eyebrow-row{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:36px}
+.eyebrow-row p{color:var(--muted);max-width:46ch}
+
+/* ---------- disciplines ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{background:var(--card);padding:26px 24px;position:relative}
+.card .icon{width:30px;height:30px;color:var(--accent);margin-bottom:16px}
+.card .icon svg{width:100%;height:100%}
+.card h3{margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem;margin:0}
+.card::before,.card::after{content:"";position:absolute;width:9px;height:9px;border-color:var(--line)}
+.card::before{top:6px;left:6px;border-top:1.5px solid;border-left:1.5px solid}
+.card::after{bottom:6px;right:6px;border-bottom:1.5px solid;border-right:1.5px solid}
+
+/* ---------- reach (hubs, no fabricated address) ---------- */
+.reach{background:var(--accent-soft)}
+.service-area{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent);margin-bottom:10px;font-size:.95rem}
+.hubs{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hub{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:10px 16px 10px 12px;font-weight:600;font-size:.92rem}
+.hub svg{width:16px;height:16px;color:var(--signal);flex:none}
+
+/* ---------- process ---------- */
+.process{list-style:none;padding:0;margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative}
+.process::before{content:"";position:absolute;top:20px;left:0;right:0;height:2px;background:var(--line);z-index:0}
+.process li{position:relative;z-index:1}
+.process .node{width:40px;height:40px;border-radius:50%;background:var(--paper);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent);margin-bottom:16px}
+.process strong{display:block;margin-bottom:6px}
+.process span{color:var(--muted);font-size:.95rem}
+.models{margin-top:40px;color:var(--muted)}
+
+/* ---------- coming 2027 ---------- */
+.soon{background:var(--band);color:var(--band-ink);position:relative;overflow:hidden}
+.soon::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(231,237,244,.08) 1.6px,transparent 1.6px);background-size:26px 26px}
+.soon .wrap{position:relative}
+.soon-top{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.soon h2{font-size:clamp(1.9rem,4vw,3.1rem);border-left:6px solid var(--signal);padding-left:20px}
+.soon .lede2{margin-top:18px;opacity:.82}
+.timeline{margin:40px 0 0;position:relative;height:70px}
+.timeline .track{position:absolute;left:0;right:0;top:34px;height:2px;background:var(--band-line)}
+.timeline .track-fill{position:absolute;left:0;top:34px;height:2px;background:var(--signal);width:55%}
+.t-point{position:absolute;top:24px;width:22px;height:22px;border-radius:50%;background:var(--band);border:2px solid var(--signal)}
+.t-point.start{left:0}
+.t-point.end{left:calc(100% - 22px);background:var(--signal)}
+.t-label{position:absolute;top:0;font-size:.82rem;font-weight:700;opacity:.85}
+.t-label.start{left:0}
+.t-label.end{right:0;text-align:right}
+.feature-list{list-style:none;padding:0;margin-top:40px;display:grid;gap:1px;background:var(--band-line);border:1px solid var(--band-line)}
+.feature-list li{background:var(--band);padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+.feature-list svg{width:20px;height:20px;color:var(--signal);flex:none;margin-top:2px}
+.feature-list strong{display:block;font-size:.98rem}
+.feature-list small{display:block;opacity:.72;font-size:.88rem;margin-top:2px}
+
+/* ---------- contact ---------- */
+.contact-box{background:var(--card);border:1px solid var(--line);padding:clamp(28px,5vw,48px);display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.contact-box p{color:var(--muted);margin:14px 0 26px}
+.mail{display:inline-flex;align-items:center;gap:10px;font-stretch:112%;font-weight:700;font-size:clamp(1.15rem,2.6vw,1.7rem);margin-bottom:26px;text-underline-offset:6px;text-decoration-thickness:2px;text-decoration-color:var(--signal)}
+.mail svg{width:24px;height:24px;color:var(--signal);flex:none}
+.contact-art{justify-self:center;width:100%;max-width:280px;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:26px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;color:var(--muted);font-size:.9rem}
+
+@media (max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .process{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .process::before{display:none}
+  .contact-box{grid-template-columns:1fr}
+  .contact-art{max-width:200px}
+}
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:28px}
+  .hero-art{order:-1;max-width:300px}
+  .soon-top{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .cards{grid-template-columns:1fr}
+  .process{grid-template-columns:1fr}
+  .timeline{height:84px}
+  .t-label.end{left:0;text-align:left;top:46px}
+  .t-point.end{top:56px}
+  .track,.track-fill{top:34px}
+}
+@media (prefers-reduced-motion:reduce){.badge i{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <input type="checkbox" id="nav-toggle" class="burger">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Aerotek Corp home">
+      <svg width="26" height="26" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 2L26 24 14 19 2 24z" fill="currentColor"/></svg>
+      Aerotek Corp
+    </a>
+    <nav class="primary" aria-label="Main">
+      <a href="#disciplines">Disciplines</a>
+      <a href="#reach">Reach</a>
+      <a href="#how">How we work</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="mailto:hello@aerotekcorp.com?subject=Hiring%20request">Request engineers</a>
+    </nav>
+    <label class="burger-label" for="nav-toggle" aria-label="Toggle menu"><span></span></label>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="badge"><i aria-hidden="true"></i>New website coming in 2027</p>
+        <h1>Engineers for aircraft that haven't flown yet.</h1>
+        <p class="lede">Aerotek Corp supplies aerospace engineering talent on contract, contract-to-hire and direct hire to manufacturers, suppliers and programs that can't wait on a slow search.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:hello@aerotekcorp.com?subject=Hiring%20request">Request engineers</a>
+          <a class="btn ghost" href="mailto:hello@aerotekcorp.com?subject=Engineering%20work%20enquiry">Find engineering work</a>
+        </div>
+      </div>
+      <svg class="diagram hero-art" viewBox="0 0 480 450" role="img" aria-label="Line drawing of an aircraft in plan view with construction guides and a wingspan dimension">
+        <g class="rings"><circle cx="240" cy="220" r="90"/><circle cx="240" cy="220" r="150"/><circle cx="240" cy="220" r="200"/></g>
+        <g class="guide"><line x1="240" y1="10" x2="240" y2="400"/><line x1="20" y1="300" x2="460" y2="300"/></g>
+        <g class="plane">
+          <path d="M240 40C252 80 256 140 256 220V330C256 350 248 365 240 382C232 365 224 350 224 330V220C224 140 228 80 240 40Z"/>
+          <path d="M256 190L440 290V312L256 270Z"/>
+          <path d="M224 190L40 290V312L224 270Z"/>
+          <path d="M256 330L330 370V382L256 360Z"/>
+          <path d="M224 330L150 370V382L224 360Z"/>
+        </g>
+        <g class="dim">
+          <line x1="40" y1="410" x2="440" y2="410"/><line x1="40" y1="402" x2="40" y2="418"/><line x1="440" y1="402" x2="440" y2="418"/>
+          <text x="240" y="436" text-anchor="middle">Talent, built to your spec</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section id="disciplines">
+    <div class="wrap">
+      <div class="eyebrow-row">
+        <h2>Disciplines we staff</h2>
+        <p>From first concept to certified delivery, we place engineers who have already done the kind of work your program needs.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M4 20L12 4l8 16M8 20l4-8 4 8"/></svg></div>
+          <h3>Structures &amp; materials</h3>
+          <p>Stress analysis, composites, structural design and repair.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 9V3M12 15v6M9 12H3M15 12h6M9.5 9.5 5 5M14.5 9.5 19 5M9.5 14.5 5 19M14.5 14.5 19 19"/></svg></div>
+          <h3>Propulsion &amp; thermal</h3>
+          <p>Engine integration, turbomachinery and thermal management.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="1"/><path d="M9 6V2M15 6V2M9 22v-4M15 22v-4M6 9H2M6 15H2M22 9h-4M22 15h-4"/></svg></div>
+          <h3>Avionics &amp; software</h3>
+          <p>Flight controls, embedded systems and hardware-in-the-loop test.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M12 6l-5.5 10M12 6l5.5 10M7 18h10"/></svg></div>
+          <h3>Systems engineering</h3>
+          <p>Requirements, integration and verification across programs.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5L16 9"/></svg></div>
+          <h3>Test &amp; certification</h3>
+          <p>Flight and ground test, airworthiness and compliance.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+          <h3>Manufacturing &amp; quality</h3>
+          <p>Process engineering, tooling, inspection and supplier quality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reach" id="reach">
+    <div class="wrap">
+      <p class="service-area"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>Service area: United States</p>
+      <h2>We staff where aerospace work actually happens.</h2>
+      <p style="color:var(--muted);margin-top:14px">Remote-first, with engineers placed on-site at the country's established aerospace and defense clusters.</p>
+      <div class="hubs">
+        <span class="hub"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Puget Sound, WA</span>
+        <span class="hub"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Southern California</span>
+        <span class="hub"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Dallas–Fort Worth, TX</span>
+        <span class="hub"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Wichita, KS</span>
+        <span class="hub"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Huntsville, AL</span>
+        <span class="hub"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Hartford, CT</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="eyebrow-row">
+        <h2>How we work</h2>
+      </div>
+      <ol class="process">
+        <li><div class="node">1</div><strong>Tell us the role</strong><span>Share the program, skills and timeline. A short call is enough.</span></li>
+        <li><div class="node">2</div><strong>We shortlist</strong><span>Engineers with direct experience, checked against your requirements.</span></li>
+        <li><div class="node">3</div><strong>You decide</strong><span>Interview who you like. We handle the paperwork.</span></li>
+        <li><div class="node">4</div><strong>We stay involved</strong><span>We check in after the start date and adjust if the work changes.</span></li>
+      </ol>
+      <p class="models">Engagements run as contract, contract-to-hire or direct hire, whichever fits the program.</p>
+    </div>
+  </section>
+
+  <section class="soon" aria-labelledby="soon-title">
+    <div class="wrap">
+      <div class="soon-top">
+        <div>
+          <h2 id="soon-title">Our new website is coming in 2027.</h2>
+          <p class="lede2">We're building a new home for open roles, project listings and hiring requests. Until it launches, this page and our email are the best way to reach us.</p>
+          <div class="timeline" aria-hidden="true">
+            <div class="track"></div>
+            <div class="track-fill"></div>
+            <div class="t-point start"></div>
+            <div class="t-point end"></div>
+            <span class="t-label start">2026 — today</span>
+            <span class="t-label end">2027 — new site launches</span>
+          </div>
+        </div>
+        <ul class="feature-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M8 4v5"/></svg><div><strong>Open roles &amp; project listings</strong><small>Browse current engineering work in one place.</small></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 21c0-4 3-6.5 7-6.5s7 2.5 7 6.5"/></svg><div><strong>Engineer profiles &amp; applications</strong><small>Share your experience and apply online.</small></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v12H9l-5 4z"/></svg><div><strong>Online hiring requests</strong><small>Send us a role brief without writing an email.</small></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <div>
+          <h2>Tell us what you're building.</h2>
+          <p>Hiring? Send the role, the program and your timeline. Looking for work? Send your CV and the disciplines you work in.</p>
+          <a class="mail" href="mailto:hello@aerotekcorp.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 6 8 7 8-7"/></svg>hello@aerotekcorp.com</a>
+          <div class="actions">
+            <a class="btn primary" href="mailto:hello@aerotekcorp.com?subject=Hiring%20request">Request engineers</a>
+            <a class="btn ghost" href="mailto:hello@aerotekcorp.com?subject=Engineering%20work%20enquiry">Find engineering work</a>
+          </div>
+        </div>
+        <svg class="contact-art" viewBox="0 0 220 220" aria-hidden="true">
+          <circle cx="110" cy="110" r="95" fill="none" stroke="var(--line)"/>
+          <circle cx="110" cy="110" r="65" fill="none" stroke="var(--line)"/>
+          <path d="M110 30c10 26 14 56 14 80s-4 54-14 80c-10-26-14-56-14-80s4-54 14-80z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M124 95l62 36v14l-62-24zM96 95l-62 36v14l62-24z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Aerotek Corp. All rights reserved.</span>
+    <span>Service area: United States · New website coming in 2027</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.querySelectorAll('nav.primary a').forEach(function(a){
+  a.addEventListener('click', function(){ document.getElementById('nav-toggle').checked = false; });
+});
+</script>
+</body>
+</html>
